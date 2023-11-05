@@ -18,7 +18,7 @@ import visit from "../assets/visit.png"
 
 const NextVisit = () => {
     return (
-        <Card sx={{ backgroundColor: "#1976d2", borderRadius: "2rem", display: "flex", flexDirection: "row", justifyContent: "left", height: "9rem", mt: "1rem" }}>
+        <Card sx={{ backgroundColor: "#1976d2", borderRadius: "2rem", display: "flex", flexDirection: "row", justifyContent: "left", height: "9rem", mt: { xs: "1rem", md: "3rem" } }}>
             <Grid>
                 <CardContent>
                     <Typography sx={{ color: "white", fontWeight: 700, fontSize: "1.5rem" }}>

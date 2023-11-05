@@ -36,7 +36,7 @@ function App() {
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/sign-up" element={<SignUp />} />
 
-          <Route path="/home" element={<LandinPage />} />
+          <Route path="/" element={<LandinPage />} />
           <Route path="/profile" element={<Profile />} />
         </Routes>
       </ThemeProvider>
