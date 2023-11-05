@@ -1,6 +1,5 @@
 import React from 'react'
 import { useAtom } from "jotai";
-
 import AppBar from '@mui/material/AppBar';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -14,6 +13,8 @@ import Typography from '@mui/material/Typography';
 import { profileIndex } from '../atoms';
 import Activities from './Activities';
 import PersonalDetails from './PersonalDetails';
+import MedicalHistory from './MedicalHistory';
+import DocRemarks from './DocRemarks';
 
 const ProfileRightPane = () => {
     const [index, setIndex] = useAtom(profileIndex)
@@ -31,6 +32,12 @@ const ProfileRightPane = () => {
             )}
             {index === 2 && (
                 <PersonalDetails />
+            )}
+            {index === 3 && (
+                <MedicalHistory />
+            )}
+            {index === 4 && (
+                <DocRemarks />
             )}
 
         </div>
