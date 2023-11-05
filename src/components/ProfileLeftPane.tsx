@@ -27,12 +27,14 @@ import MessageOutlinedIcon from '@mui/icons-material/MessageOutlined';
 import person1 from "../assets/person1.jpeg"
 
 import { profileIndex } from '../atoms';
+import { activityIndex } from '../atoms';
 
 const ProfileLeftPane = () => {
     const [progress, setProgress] = useState(60);
     const [index, setIndex] = useAtom(profileIndex)
+    const [nestedIndex, setNestedIndex] = useAtom(activityIndex)
     return (
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+        <Grid sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
 
             <Card elevation={0} sx={{ paddingX: "0rem", marginTop: "2rem" }}>
                 <CardMedia component="img"
@@ -47,7 +49,11 @@ const ProfileLeftPane = () => {
             <ProgressBar />
             <div style={{ marginTop: "1rem" }}>
                 <List sx={{ width: "100%", padding: 0 }}>
-                    <ListItem sx={{ width: "100%", borderRadius: "1rem", backgroundColor: `${index === 1 ? "#1976d2" : ""}` }} onClick={() => setIndex(1)}>
+                    <ListItem sx={{ width: "100%", borderRadius: "1rem", backgroundColor: `${index === 1 ? "#1976d2" : ""}` }} onClick={() => {
+                        setIndex(1)
+                        setNestedIndex(0)
+
+                    }}>
                         <ListItemButton>
                             <ListItemIcon sx={{ color: `${index === 1 ? "white" : ""}` }}>
                                 <InfoOutlinedIcon />
@@ -55,7 +61,9 @@ const ProfileLeftPane = () => {
                             <ListItemText sx={{ color: `${index === 1 ? "white" : ""}` }}>Activities </ListItemText>
                         </ListItemButton>
                     </ListItem>
-                    <ListItem sx={{ width: "100%", borderRadius: "1rem", backgroundColor: `${index === 2 ? "#1976d2" : ""}` }} onClick={() => { setIndex(2) }}>
+                    <ListItem sx={{ width: "100%", borderRadius: "1rem", backgroundColor: `${index === 2 ? "#1976d2" : ""}` }} onClick={() => {
+                        setIndex(2)
+                    }}>
                         <ListItemButton>
                             <ListItemIcon sx={{ color: `${index === 2 ? "white" : ""}` }}>
                                 <InfoOutlinedIcon />
@@ -81,7 +89,7 @@ const ProfileLeftPane = () => {
                     </ListItem>
                 </List>
             </div>
-        </div>
+        </Grid>
 
     )
 }

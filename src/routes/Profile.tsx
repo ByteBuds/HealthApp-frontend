@@ -13,10 +13,10 @@ const Profile = () => {
         <div>
             {/* <ProfileNavbar /> */}
             <Grid container direction="row">
-                <Grid item sx={{ padding: "0rem", width: "20%" }}>
+                <Grid item sx={{ padding: "0rem", width: "20%", display: { xs: "none", md: "block" } }}>
                     <ProfileLeftPane />
                 </Grid>
-                <Grid item sx={{ backgroundColor: "#f0f2f6", width: "80%" }}>
+                <Grid item sx={{ backgroundColor: "#f0f2f6", width: { xs: "100%", md: "80%" } }}>
                     <ProfileRightPane />
                 </Grid>
             </Grid>
