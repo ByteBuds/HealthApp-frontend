@@ -57,21 +57,21 @@ const MedicinesToTake = () => {
                 </Grid>
                 <CardContent>
                     <Stack direction="row" spacing={3}>
-                        <Button variant="outlined" sx={{ borderRadius: 8 }} onClick={() => setOpenDiet(true)}>Diet Control</Button>
+                        <Button variant="outlined" sx={{ borderRadius: 8 }} onClick={() => setOpenDiet(true)}>Risk Groups</Button>
                         <Button variant="outlined" sx={{ borderRadius: 8 }} onClick={() => setOpenSideEffects(true)}>Side Effects</Button>
                     </Stack>
 
                 </CardContent>
             </Card>
 
-            {/* Dialog - Diet control*/}
+            {/* Dialog - Risk groups*/}
             <Dialog
                 onClose={handleClose}
                 aria-labelledby="customized-dialog-title"
                 open={openDiet}
             >
                 <DialogTitle sx={{ m: 0, p: 2 }} id="customized-dialog-title">
-                    Diet Control
+                    Risk groups
                 </DialogTitle>
                 <IconButton
                     aria-label="close"

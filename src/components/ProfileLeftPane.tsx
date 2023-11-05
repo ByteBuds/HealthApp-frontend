@@ -28,11 +28,13 @@ import person1 from "../assets/person1.jpeg"
 
 import { profileIndex } from '../atoms';
 import { activityIndex } from '../atoms';
+import { medicalShopsIndex } from '../atoms';
 
 const ProfileLeftPane = () => {
     const [progress, setProgress] = useState(60);
     const [index, setIndex] = useAtom(profileIndex)
     const [nestedIndex, setNestedIndex] = useAtom(activityIndex)
+    const [shopIndex, setShopIndex] = useAtom(medicalShopsIndex)
     return (
         <Grid sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
 
@@ -52,6 +54,7 @@ const ProfileLeftPane = () => {
                     <ListItem sx={{ width: "100%", borderRadius: "1rem", backgroundColor: `${index === 1 ? "#1976d2" : ""}` }} onClick={() => {
                         setIndex(1)
                         setNestedIndex(0)
+                        setShopIndex(0)
 
                     }}>
                         <ListItemButton>
